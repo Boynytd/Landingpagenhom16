@@ -1,53 +1,145 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'VT323', monospace;
     margin: 0;
     padding: 0;
+    background-color: #f0f0f0; 
 }
+
 header {
-    background-color: #000000;
+    background-color: #78bcc4;
     color: white;
-    padding: 5px;
-    text-align: center;
-    position: relative;
-    border-bottom: 2px solid white; 
-    font-size: 7px;
-}
-nav {
-    display: flex; 
-    justify-content: center;
-    align-items: center; 
-    background-color: #ffffff;
     padding: 20px;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    text-align: center;
+    border-bottom: 2px solid #78bcc4; /* Viền xanh */
 }
-nav img {
-    width: 50px; 
-    height: auto; 
-    margin-bottom: 10px; 
-    margin-right: 10px;
+
+header .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-nav h1 {
-    color: rgb(0, 0, 0); 
-    font-size: 24px; 
-    margin: 0 15px 0 0; 
+
+header img {
+    width: 80px;
+    height: auto;
+    margin-right: 20px;
 }
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+header p {
+    font-size: 1em;
+    margin: 0;
+}
+
+nav {
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 nav ul {
     list-style-type: none;
+    margin: 0;
     padding: 0;
     display: flex;
-    margin-left: 10px;
+    justify-content: center;
 }
+
 nav ul li {
-    margin: 0 15px; 
-    color: rgb(0, 0, 0); 
-    text-decoration: none; 
+    margin: 0 15px;
 }
+
+nav ul li a {
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #78bcc4; 
+}
+
+.hero {
+    background-image: url('images/fishing-at-the-lake-free-vector.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0; 
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.play-button {
+    background-color: #007bff; /* Màu xanh dương */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 10px; /* Bo tròn nhiều hơn */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Arial', sans-serif; /* Thay đổi font chữ */
+ }
+ 
+ .play-button:hover {
+    background-color: #0056b3; /* Màu xanh đậm hơn */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px); /* Nâng nút lên một chút */
+ }
+
+.features {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.features .feature {
+    width: 600px; 
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.features img {
+    width: 500px; 
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
 .image-slider {
     width: 100%;
-    height: 1000px;
+    height: 1000px; 
     overflow: hidden;
     position: relative;
+    margin-bottom: 50px;
 }
+
 .slide {
     position: absolute;
     top: 0;
@@ -56,287 +148,240 @@ nav ul li {
     height: 100%;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
-    margin-top: 20px;
 }
+
 .slide.active {
     opacity: 1;
 }
+
 .slide img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-}
-section.hero {
-    height: 300px; /* Adjust height as needed */
-    background-image: url('images/pixel.jpg'); /* Background image path */
-    background-size: cover; /* Ensure the image covers the section */
-    display: flex; /* Use flexbox for alignment */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    margin: 0; /* Reset margin */
+    object-fit: cover;
 }
 
-section.hero h2, section.hero p {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    color: white; /* White text color for contrast */
-    padding: 10px; /* Padding around the text */
-    border-radius: 5px; /* Rounded corners */
-    text-align: center; /* Center text alignment */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better visibility */
+.nft-market {
+    text-align: center;
+    padding: 50px 0;
 }
 
-section.hero h2 {
-    font-size: 2.5em; /* Larger font size for the heading */
-    font-weight: bold; /* Bold text */
-    margin: 10px 0; /* Margin for spacing */
+.nft-market h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
-section.hero p {
-    margin: 10px 0; /* Margin for spacing */
-    font-size: 1.2em; /* Adjust font size for the paragraph */
+.nft-market p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
 }
+
 .room-cards {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin: 20px;
-    margin-left: 50px; 
 }
+
 .room-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
     padding: 20px;
     margin: 10px;
     text-align: center;
-    width: 500px;
-    height: 700px;
+    width: 300px; 
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; 
 }
+
+.room-card:hover {
+    transform: translateY(-5px); 
+}
+
 .room-card img {
     width: 100%;
-    height: 500px;
+    height: 200px; 
     object-fit: cover;
-    border-radius: 4px;
+    border-radius: 8px;
     margin-bottom: 10px;
 }
-footer {
-    background-color: #242724;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-.services-section {
-    margin: 40px 0;
-    text-align: center;
-    font-size: x-large;
+
+.room-card h3 {
+    margin-bottom: 5px;
 }
 
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 50px;
+.room-card p {
+    font-size: 0.9em;
+    margin-bottom: 10px;
 }
 
-.service-item {
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 100%; 
+.room-card h4 {
+    color: #007bff; 
+    margin-bottom: 10px;
 }
-.service-item img {
-    width: 100%;
-    height: 300px; 
-    object-fit: cover;
-    border-radius: 8px 8px 0 0;
-}
-.service-item h3,
-.service-item p {
-    padding: 10px;
-    margin: 0;
-}
-.service-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-.floating-icons {
-    position: fixed;
-    left: 20px;
-    bottom: 2%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    z-index: 1000;
-}
-.icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
-}
-.icon img {
-    width: 60%;
-    height: 60%;
-}
-.icon.red {
-    background-color: #f44336;
-}
-.icon.blue {
-    background-color: #2196f3;
-}
-.icon.white {
-    background-color: #FFFFFF;
-}
-.icon:hover {
-    transform: scale(1.1);
-}
-.scrollToTopBtn {
-    position: fixed; /* Fixes the button to the viewport */
-    bottom: 50px; /* Distance from the bottom */
-    right: 50px; /* Distance from the right */
-    padding: 10px; /* Space inside the button */
-    background-color: #007bff; /* Blue background */
-    color: white; /* White text color */
-    border: none; /* No border */
-    border-radius: 50%; /* Make it circular */
-    font-size: 24px; /* Size of the up arrow */
-    cursor: pointer; /* Pointer cursor on hover */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for depth */
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
-    display: none; /* Hidden by default */
-    z-index: 1000; /* Ensure it appears above other elements */
-    width: 65px; /* Set the width of the button */
-    height: 65px; /* Set the height of the button */
-}
-.scrollToTopBtn:hover {
-    background-color: #0056b3; 
-    transform: translateY(-2px); 
-}
-.scrollToTopBtn.show {
-    display: block; 
-}
-footer {
-    background-color: #000000;
+
+.room-card button {
+    background-color: #28a745; 
     color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.room-card button:hover {
+    background-color: #218838;
+}
+
+.call-to-action {
+    background-image: url('images/vector-barracuda-fish-together-in-deep-water.jpg');
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.cta-content {
+    background-color: rgba(0, 0, 0, 0.2); 
     padding: 20px;
-  }
-  
-  .footer-nav {
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-content h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #78bcc4;
+    color: white;
+    padding: 30px 0;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 2px solid white;
-    padding-bottom: 20px;
-  }
-  
-  .footer-nav nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .footer-nav nav img {
+    flex-wrap: wrap; 
+    margin-bottom: 20px;
+}
+
+.footer-nav img {
     width: 50px;
     height: auto;
-    margin-right: 10px;
-  }
-  
-  .footer-nav nav h1 {
-    color: rgb(2, 2, 2);
-    font-size: 24px;
-    margin: 0 15px 0 0;
-  }
-  
-  .footer-nav nav ul {
+    margin-right: 20px;
+}
+
+.footer-nav ul {
     list-style-type: none;
+    margin: 0;
     padding: 0;
     display: flex;
-  }
-  
-  .footer-nav nav ul li {
-    margin: 0 15px;
-  }
-  
-  .footer-nav nav ul li a {
-    color: rgb(0, 0, 0);
-    text-decoration: underline;
-  }
-  
-  .footer-info {
-    text-align: center;
-    padding-top: 20px;
-  }
-  
-  .footer-info p {
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+.footer-nav li {
+    margin: 5px 10px; 
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+    color: #007bff;
+}
+
+.footer-info {
+    margin-bottom: 20px;
+}
+
+.footer-info p {
     margin: 5px 0;
-  }
-  .container {
-    display: flex;
-    align-items: center;
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-}
-.content {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items */
-    padding: 20px; /* Increased padding for a larger box */
-    margin: 20px; /* Margin for spacing */
-    max-width: 90%; /* Set a maximum width for responsiveness */
-    background-color: rgba(255, 255, 255, 0.8); /* Optional background for the text box */
-    border-radius: 10px; /* Rounded corners */
 }
 
-.content h1 {
-    font-size: 2.5rem; /* Heading size */
-    margin-bottom: 20px; /* Space below heading */
-}
-
-.content h2 {
-    font-size: 1.75rem; /* Adjusted size for subheading */
-    color: #AB410C; /* Subheading color */
-    margin-bottom: 20px; /* Space below subheading */
-    text-transform: uppercase; /* Uppercase text */
-    letter-spacing: 1px; /* Spacing between letters */
-}
-
-.content p {
-    font-size: 1rem; /* Paragraph size */
-    color: #555555; /* Paragraph color */
-    line-height: 1.6; /* Line height for readability */
-}
-
-.content button {
-    background-color: #AB410C; /* Button background color */
-    color: white; /* Button text color */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 10px 15px; /* Padding for the button */
-    cursor: pointer; /* Pointer cursor on hover */
-}
-
-.content button:hover {
-    background-color: #5a8327; /* Button hover color */
-}
-.image {
-    flex: 1;
+.social-links {
     display: flex;
     justify-content: center;
 }
-.image img {
-    max-width: 80%;
-    height: auto;
-    border-radius: 20px;
+
+.social-links a {
+    margin: 0 10px;
+}
+
+.scrollToTopBtn {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+    display: none;
+    z-index: 1000;
+    width: 65px;
+    height: 65px;
+}
+
+.scrollToTopBtn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.scrollToTopBtn.show {
+    display: block;
+}
+
+/* CSS cho phần Giới thiệu */
+.about {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.about p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about ul {
+    list-style: disc; /* Đổi kiểu list marker */
+    text-align: left; /* Canh lề trái cho nội dung list */
+    padding-left: 40px; /* Thêm padding bên trái */
+}
+
+.about li {
+    font-size: 1em;
+    margin-bottom: 10px;
 }
